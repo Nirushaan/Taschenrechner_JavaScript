@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Nirushaan Sureshkumar"/>
+    <meta content="TODO" name="Taschenrechner mit JavaScript"/>
+    <meta content="TODO" name="description"/>
+    <title>Taschenrechner</title>
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        function back() {
+            var exp = document.taschenrechner.textview.value;
+            document.taschenrechner.textview.value = exp.substring(0, exp.length - 1);
+        }
+    </script>
+</head>
+<body>
+<div class="taschenrechner">
+    <form name="taschenrechner">
+        <input class="screen" name="textview" type="textview">
+    </form>
+    <table>
+        <tr>
+            <td><input class="bn" onclick=" document.taschenrechner.textview.value = ''" type="button" value="C"/></td>
+            <td><input class="bn" onclick="back()" type="button" value="Su"/></td>
+            <td><input class="bn"
+                       onclick="document.taschenrechner.textview.value = Math.sqrt(document.taschenrechner.textview.value)"
+                       type="button" value="√"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '/'" type="button" value="/"/></td>
+        </tr>
+        <tr>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '7'" type="button" value="7"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '8'" type="button" value="8"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '9'" type="button" value="9"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '*'" type="button" value="x"/></td>
+        </tr>
+        <tr>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '4'" type="button" value="4"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '5'" type="button" value="5"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '6'" type="button" value="6"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '-'" type="button" value="-"/></td>
+        </tr>
+        <tr>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '1'" type="button" value="1"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '2'" type="button" value="2"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '3'" type="button" value="3"/></td>
+            <td rowspan="2"><input class="bn plus" onclick="document.taschenrechner.textview.value += '+'"
+                                   style="height: 118px" type="button" value="+"/></td>
+        </tr>
+        <tr>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '0'" type="button" value="0"/></td>
+            <td><input class="bn" onclick="document.taschenrechner.textview.value += '.'" type="button" value="."/></td>
+            <td><input class="bn"
+                       onclick="document.taschenrechner.textview.value = eval(document.taschenrechner.textview.value)"
+                       type="button" value="="/></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
